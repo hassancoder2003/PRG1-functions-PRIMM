@@ -13,10 +13,9 @@ print(result)
 message = "outside"
 
 
-def show_message():
-    message = "inside"
+def show_message(message):
     print(message)
 
 
-show_message()
+show_message('lol')
 print(message)

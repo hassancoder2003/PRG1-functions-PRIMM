@@ -1,3 +1,5 @@
+import string
+
 def check_password_strength(password):
     score = 0
     feedback = []
@@ -21,6 +23,10 @@ def check_password_strength(password):
         score += 1
     else:
         feedback.append("Password should contain numbers")
+    if any(char in string.punctuation for char in password):
+        score += 1
+    else:
+        feedback.append("Password should contain special characters")
 
     return score, feedback
 
